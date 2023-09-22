@@ -1,0 +1,285 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Media query per schermi più piccoli */
+@media (max-width: 768px) {
+  .intro {
+    font-size: 120%;
+    padding: 30px 15px;
+  }
+}
+
+/* Media query per schermi ancora più piccoli */
+@media (max-width: 480px) {
+  .intro {
+    font-size: 100%;
+  }
+}
+
+/* Media query per schermi più piccoli */
+@media (max-width: 768px) {
+  .intro {
+    font-size: 120%; /* Riduci la dimensione del testo per schermi più piccoli */
+    padding: 30px 15px; /* Riduci il padding per schermi più piccoli */
+  }
+}
+
+/* Media query per schermi ancora più piccoli */
+@media (max-width: 480px) {
+  .intro {
+    font-size: 100%; /* Riduci ulteriormente la dimensione del testo */
+  }
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+/* NAVI BAR */
+.nav-1 {
+  /* border: 2px solid red; */
+  font-family: "Roboto Mono";
+  background-color: black;
+  font-weight: bold;
+  padding: 15px 15px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.nav-1 li {
+  display: inline-block;
+}
+
+.nav-1 li a {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.nav-1 li a:hover {
+  color: aqua;
+}
+
+.git-logo {
+  color: whitesmoke;
+  float: right;
+}
+
+.git-logo:hover {
+  color: aqua;
+}
+
+/* INTRO */
+
+.name-intro {
+  color: whitesmoke;
+}
+
+.name-intro:hover {
+  color: aqua;
+}
+
+.intro {
+  background-image: url(photo/stars_background.avif);
+  color: whitesmoke;
+  font-family: "Roboto Mono";
+  padding: 50px 30px;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.intro-title {
+  font-size: 350%;
+  padding-bottom: 2%;
+}
+
+.intro-text {
+  font-size: 150%;
+}
+
+.project-button {
+  color: whitesmoke;
+  background-color: black;
+  border-color: whitesmoke;
+  border-radius: 15%;
+  font-family: "Roboto Mono";
+  height: 50px;
+  max-width: 90px;
+  margin-top: 25px;
+}
+
+/* PROJECT */
+
+.projects {
+  color: whitesmoke;
+  font-family: "Roboto Mono";
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.undertitle {
+  color: black;
+  font-family: "Roboto Mono";
+  font-size: large;
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 50px;
+  width: 200px;
+  height: 275px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.project-image {
+  height: 200px; /* Altezza dell'immagine */
+  overflow: hidden;
+  border-radius: 10px 10px;
+  margin-bottom: 30px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-name {
+  font-family: "Roboto Mono";
+  text-align: center;
+}
+
+/* .project-details {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+} */
+
+/* ABOUT */
+
+.main-about {
+  font-family: "Roboto Mono";
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  background-color: black;
+}
+
+.about-title {
+  color: whitesmoke;
+  font-size: 28px;
+  margin: 75px 80px 0px;
+}
+
+.about-wrapper {
+  color: whitesmoke;
+  max-width: 100%;
+  min-height: 80vh;
+  margin: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.about-wrapper > h4 {
+  margin: 0 0 20px 0;
+}
+
+/* FOOTER */
+
+.footer-container {
+  background-image: url(photo/tunnel.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  min-height: 93vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.section-title {
+  color: whitesmoke;
+  font-size: 28px;
+  margin: 20px 80px;
+}
+
+.info-links {
+  font-size: 25px;
+  color: whitesmoke;
+  margin: 80px;
+  display: inline-block;
+}
+
+/* ANIMATION */
+
+@keyframes moveAnimation {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes moveAnimation-one {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes moveAnimation-three {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+#title-ani {
+  animation: moveAnimation 2s linear forwards;
+}
+
+#title-text-ani {
+  animation: moveAnimation-one 2s linear forwards;
+}
+
+.project-button {
+  animation: moveAnimation-three 2s linear forwards;
+}
