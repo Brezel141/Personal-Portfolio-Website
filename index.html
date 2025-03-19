@@ -3,8 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Manuel's Portfolio - IT Student and Developer showcasing projects and skills" />
+    <meta name="keywords" content="portfolio, developer, IT student, web development, projects" />
+    <meta name="author" content="Manuel" />
+    <meta property="og:title" content="Manuel's Portfolio" />
+    <meta property="og:description" content="IT Student and Developer showcasing projects and skills" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://brezel141.github.io/my_website/" />
 
-    <title>Manuel</title>
+    <title>Manuel - Portfolio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="photo/favicon.png" />
 
     <!-- LINK CSS RESET  -->
     <link rel="stylesheet" href="reset.css" />
@@ -26,36 +36,44 @@
     ></script>
   </head>
   <body>
+    <!-- Loading Animation -->
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
 
     <!-- NAVI -->
-
     <main>
       <ul class="nav-1">
-        <li><a href="#">Home</a></li>
-        <li><a href="#project-id">Project</a></li>
-        <li><a href="#about-id">About</a></li>
-        <li><a href="#contact-id">Contact</a></li>
-        <li class="git-logo">
-          <a href="https://github.com/Brezel141"  target="_blank"
-            ><i class="fa-brands fa-github" style="color: whitesmoke"></i
-          ></a>
+        <li><a href="#" class="nav-link glitch-hover" data-text="Home">Home</a></li>
+        <li><a href="#project-id" class="nav-link glitch-hover" data-text="Project">Project</a></li>
+        <li><a href="#about-id" class="nav-link glitch-hover" data-text="About">About</a></li>
+        <li><a href="#contact-id" class="nav-link glitch-hover" data-text="Contact">Contact</a></li>
+        <li class="social-icons">
+          <a href="https://github.com/Brezel141" class="nav-link glitch-hover" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/manuel-broggio-964966186/" class="nav-link glitch-hover" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
         </li>
       </ul>
     </main>
 
     <!-- INTRO -->
-
     <main class="intro">
-      <h1 class="intro-title" id="title-ani">Hello World</h1>
-      <p class="intro-text" id="title-text-ani">
+      <h1 class="intro-title tech-text" id="title-ani" data-text="Hello World">Hello World</h1>
+      <p class="intro-text tech-text" id="title-text-ani" data-text="I'm Manuel, student in IT. Nice to e-meet you.">
         I'm <a href="#about-id" class="name-intro">Manuel</a>, student in IT. Nice to
         e-meet you.
       </p>
-      <button class="project-button"><a href="#project-id">Projects</a></button>
+      <div class="button-container">
+        <button class="nav-button"><a href="#project-id">Projects</a></button>
+        <button class="nav-button"><a href="#about-id">About Me</a></button>
+        <button class="nav-button"><a href="#contact-id">Connect</a></button>
+      </div>
     </main>
 
     <!-- PROJECT -->
-
     <main class="projects" id="project-id">
       <h2 class="undertitle">My Project</h2>
       <div class="project-grid">
@@ -75,11 +93,11 @@
         <!-- CARD -->
         <div class="project-card">
           <div class="project-image">
-            <a href="https://github.com/Brezel141/100_days_of_code"  target="_blank"><img src="photo/glasspro.jpg" alt="computer-pic" /></a>
+            <a href="https://github.com/Brezel141/AI-Image-Recognition"  target="_blank"><img src="photo/glasspro.jpg" alt="computer-pic" /></a>
           </div>
           <h3 class="project-name">
-            <a href="https://github.com/Brezel141/100_days_of_code"  target="_blank"
-              >100 Day of code</a
+            <a href="https://github.com/Brezel141/AI-Image-Recognition"  target="_blank"
+              >AI-Image-Recognition</a
             >
           </h3>
         </div>
@@ -92,18 +110,6 @@
           <h3 class="project-name">
             <a href="https://play.unity.com/en/games/1d51cfc9-74e2-42b8-acf2-f9ecdd9f5d98/galaxyshooter"  target="_blank"
               >Galaxy Shooter</a
-            >
-          </h3>
-        </div>
-
-        <!-- CARD -->
-        <div class="project-card">
-          <div class="project-image">
-            <a href="https://github.com/Brezel141/projects_course"  target="_blank"><img src="photo/pythonpic.jpg" alt="python-pic" /></a>
-          </div>
-          <h3 class="project-name">
-            <a href="https://github.com/Brezel141/projects_course"  target="_blank"
-              >Project course</a
             >
           </h3>
         </div>
@@ -123,11 +129,11 @@
         <!-- CARD -->
         <div class="project-card">
           <div class="project-image">
-            <a href="https://github.com/Brezel141/to_do_app" target="_blank"><img src="photo/todo.jpg" alt="to-do-paper" /></a>
+            <a href="https://github.com/Brezel141/Quest-Master" target="_blank"><img src="photo/quest-diary.jpg" alt="to-do-paper" /></a>
           </div>
           <h3 class="project-name">
-            <a href="https://github.com/Brezel141/to_do_app" target="_blank"
-              >To do App</a
+            <a href="https://github.com/Brezel141/Quest-Master" target="_blank"
+              >Quest Master</a
             >
           </h3>
         </div>
@@ -147,40 +153,37 @@
     </main>
 
     <!-- ABOUT -->
-
     <main class="main-about" id="about-id">
-      <h3 class="about-title">About</h3>
+      <h3 class="about-title typing-text">About</h3>
       <div class="about-wrapper">
-        <h4>Hello World!</h4>
-        <p>
-          I am Manuel, IT student in Berlin. Nice to e-meet you.
-        </p><br>
-        <p><br></p>
-          <p>
-            "In My Book, Experience Outranks Everything."
-          </p>
-          <p>-Captain Rex, 'The Clone Wars'</p>
-        </div>
+        <h4 class="typing-text">Hello World!</h4>
+        <p class="typing-text">
+          I am Manuel, an IT student based in Berlin, passionate about development and AI.<br>While my journey in tech is just beginning, I'm excited about the possibilities<br>ahead.
+        </p>
+        <p class="typing-text">
+          My goal is to make my mark in the gaming industry,<br>though I'm open to exploring various opportunities in tech.<br>I believe in continuous learning and growth.
+        </p>
+        <p class="typing-text quote">
+          "In My Book, Experience Outranks Everything."
+        </p>
+        <p class="typing-text quote-author">-Captain Rex, 'The Clone Wars'</p>
       </div>
     </main>
 
     <!-- FOOTER -->
-
     <footer class="footer-container" id="contact-id">
-      <h3 class="section-title">Contact</h3>
+      <h3 class="section-title">Connect With Me</h3>
       <div class="contact-container-footer">
-        <a
-          class="info-links"
-          href="https://github.com/Brezel141"
-          target="_blank"
-          >GitHub</a
-        >
-        <a
-          class="info-links"
-          href="https://github.com/Brezel141/my_website"
-          target="_blank"
-          >Code</a
-        >
+        <div class="social-links">
+          <a href="https://github.com/Brezel141" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/manuel-broggio-964966186/" target="_blank" class="social-link">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
       </div>
     </footer>
 
