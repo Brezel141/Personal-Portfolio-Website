@@ -11,11 +11,9 @@ window.addEventListener('load', () => {
     loader.style.opacity = '0';
     setTimeout(() => {
       loader.style.display = 'none';
-      // Start tech text animations after loader is hidden
-      techTexts.forEach((text, index) => {
-        setTimeout(() => {
-          text.classList.add('animate');
-        }, index * 500);
+      // Start tech text animations immediately after loader is hidden
+      techTexts.forEach((text) => {
+        text.classList.add('animate');
       });
     }, 500);
   }, 2000);

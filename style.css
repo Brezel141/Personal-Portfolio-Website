@@ -812,7 +812,7 @@ body.light-theme .name-intro {
 
 /* Tech Text Animation */
 .tech-text {
-  opacity: 0;
+  opacity: 1;
   position: relative;
   color: whitesmoke;
 }
@@ -830,7 +830,6 @@ body.light-theme .name-intro {
 }
 
 .tech-text.animate {
-  opacity: 1;
   animation: glitchTextContinuous 5s infinite;
 }
 
@@ -841,27 +840,21 @@ body.light-theme .name-intro {
 @keyframes glitchTextContinuous {
   0% {
     text-shadow: 3px 0 0 rgba(0,255,255,0.5), -3px 0 0 rgba(255,0,80,0.3);
-    opacity: 0.9;
   }
   20% {
     text-shadow: -3px 0 0 rgba(0,255,255,0.5), 3px 0 0 rgba(255,0,80,0.3);
-    opacity: 1;
   }
   40% {
     text-shadow: 2px 0 0 rgba(0,255,255,0.5), -2px 0 0 rgba(255,0,80,0.3);
-    opacity: 0.9;
   }
   60% {
     text-shadow: 4px 0 0 rgba(0,255,255,0.5), -4px 0 0 rgba(255,0,80,0.3);
-    opacity: 1;
   }
   80% {
     text-shadow: -2px 0 0 rgba(0,255,255,0.5), 2px 0 0 rgba(255,0,80,0.3);
-    opacity: 0.9;
   }
   100% {
     text-shadow: 3px 0 0 rgba(0,255,255,0.5), -3px 0 0 rgba(255,0,80,0.3);
-    opacity: 0.9;
   }
 }
 
@@ -916,31 +909,28 @@ body.light-theme .name-intro {
 .button-container {
   display: flex;
   gap: 20px;
+  justify-content: left;
   margin-top: 30px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.5s ease forwards;
-  animation-delay: 2s;
 }
 
 .nav-button {
-  color: aqua;
-  background-color: rgba(0, 0, 0, 0.3);
+  background: none;
   border: 2px solid aqua;
-  border-radius: 5px;
+  color: aqua;
+  padding: 10px 20px;
   font-family: "Roboto Mono";
-  padding: 12px 24px;
+  font-size: 1em;
   cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  backdrop-filter: blur(5px);
+  z-index: 1;
 }
 
 .nav-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -949,68 +939,21 @@ body.light-theme .name-intro {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(0, 255, 255, 0.4),
+    rgba(0, 255, 255, 0.2),
     transparent
   );
-  transition: all 0.5s ease;
-}
-
-.nav-button::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: repeating-linear-gradient(
-    60deg,
-    transparent,
-    transparent 10px,
-    rgba(0, 255, 255, 0.1) 10px,
-    rgba(0, 255, 255, 0.1) 20px
-  );
-  transform: translate(-100%, -100%) rotate(45deg);
-  animation: buttonGlow 5s linear infinite;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: 0.5s;
+  z-index: -1;
 }
 
 .nav-button:hover {
-  color: #fff;
-  border-color: #fff;
-  background: rgba(0, 255, 255, 0.2);
-  transform: translateY(-3px);
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5),
-              0 0 30px rgba(0, 255, 255, 0.3),
-              0 0 45px rgba(0, 255, 255, 0.1);
+  background-color: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 10px aqua;
+  transform: translateY(-2px);
 }
 
 .nav-button:hover::before {
   left: 100%;
-}
-
-.nav-button:hover::after {
-  opacity: 1;
-}
-
-@keyframes buttonGlow {
-  0% {
-    transform: translate(-100%, -100%) rotate(45deg);
-  }
-  100% {
-    transform: translate(100%, 100%) rotate(45deg);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @keyframes revealGlitch {
