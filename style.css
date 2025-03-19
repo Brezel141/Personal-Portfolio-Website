@@ -412,6 +412,8 @@ a {
   flex-direction: column;
   background-color: black;
   padding: 50px 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .about-title {
@@ -433,15 +435,21 @@ a {
   flex-direction: column;
   gap: 15px;
   justify-content: center;
-}
-
-.about-wrapper > h4 {
-  margin: 0 0 20px 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about-wrapper p {
   line-height: 1.6;
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-line;
+}
+
+.about-wrapper h4 {
+  margin: 0 0 20px 0;
+  font-size: 1.5em;
 }
 
 /* Typing Animation for About section */
@@ -456,6 +464,85 @@ a {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.about-wrapper .typing-text.visible {
+  opacity: 1;
+  width: 100%;
+  animation: typing 1s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+.about-wrapper .typing-text.completed {
+  border-right: none;
+  animation: none;
+}
+
+.quote {
+  font-style: italic;
+  color: aqua;
+  margin-top: 20px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.quote-author {
+  color: #888;
+  font-size: 0.9em;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* Responsive Design for About Section */
+@media (max-width: 768px) {
+  .about-wrapper {
+    padding: 0 20px;
+    margin: 20px auto;
+  }
+
+  .about-wrapper p {
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+
+  .quote {
+    font-size: 0.9em;
+    padding: 15px;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-wrapper {
+    padding: 0 15px;
+    margin: 15px auto;
+  }
+
+  .about-wrapper p {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+
+  .quote {
+    font-size: 0.85em;
+    padding: 10px;
+    margin: 8px 0;
+  }
+}
+
+/* Landscape Mode for About Section */
+@media (max-height: 600px) and (orientation: landscape) {
+  .about-wrapper {
+    padding: 0 20px;
+    margin: 15px auto;
+  }
+
+  .about-wrapper p {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
 }
 
 /* FOOTER */
@@ -956,5 +1043,225 @@ body.light-theme .name-intro {
     clip-path: inset(0 0 0 0);
     transform: translateY(0) skew(0);
     opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Navigation */
+  .nav-1 {
+    padding: 10px;
+  }
+
+  .nav-1 li {
+    margin-left: 15px;
+    font-size: 0.9em;
+  }
+
+  .social-icons {
+    margin-left: 10px;
+  }
+
+  .social-icons a {
+    margin-left: 10px;
+    font-size: 1em;
+  }
+
+  /* Intro Section */
+  .intro {
+    padding: 30px 15px;
+    text-align: center;
+  }
+
+  .intro h1 {
+    font-size: 2em;
+  }
+
+  .intro p {
+    font-size: 1.1em;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .button {
+    width: 200px;
+  }
+
+  /* About Section */
+  .main-about {
+    padding: 30px 15px;
+  }
+
+  .about-wrapper {
+    padding: 20px;
+  }
+
+  .about-wrapper h2 {
+    font-size: 1.8em;
+  }
+
+  .about-wrapper p {
+    font-size: 1em;
+  }
+
+  .quote {
+    font-size: 0.9em;
+    padding: 15px;
+  }
+
+  /* Projects Section */
+  .projects {
+    padding: 30px 15px;
+  }
+
+  .project-card {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .project-card img {
+    height: 200px;
+  }
+
+  .project-card h3 {
+    font-size: 1.2em;
+  }
+
+  .project-card p {
+    font-size: 0.9em;
+  }
+
+  /* Contact Section */
+  .contact-container {
+    padding: 30px 15px;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 1em;
+  }
+
+  /* Footer */
+  .footer-container {
+    padding: 30px 15px;
+  }
+
+  .section-title {
+    font-size: 1.8em;
+  }
+
+  .social-links {
+    gap: 20px;
+  }
+
+  .social-links a {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Navigation */
+  .nav-1 li {
+    margin-left: 10px;
+    font-size: 0.8em;
+  }
+
+  /* Intro Section */
+  .intro h1 {
+    font-size: 1.8em;
+  }
+
+  .intro p {
+    font-size: 1em;
+  }
+
+  .button {
+    width: 180px;
+    font-size: 0.9em;
+  }
+
+  /* About Section */
+  .about-wrapper h2 {
+    font-size: 1.5em;
+  }
+
+  .about-wrapper p {
+    font-size: 0.9em;
+  }
+
+  .quote {
+    font-size: 0.8em;
+  }
+
+  /* Projects Section */
+  .project-card img {
+    height: 180px;
+  }
+
+  .project-card h3 {
+    font-size: 1.1em;
+  }
+
+  .project-card p {
+    font-size: 0.8em;
+  }
+
+  /* Contact Section */
+  .contact-form {
+    padding: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9em;
+  }
+
+  /* Footer */
+  .section-title {
+    font-size: 1.5em;
+  }
+
+  .social-links a {
+    font-size: 1.3em;
+  }
+}
+
+/* Tablet Specific Adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .project-card {
+    width: calc(50% - 20px);
+  }
+
+  .about-wrapper {
+    padding: 30px;
+  }
+
+  .contact-form {
+    width: 80%;
+  }
+}
+
+/* Landscape Mode Adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+  .intro {
+    min-height: auto;
+    padding: 100px 30px;
+  }
+
+  .footer-container {
+    min-height: auto;
+    padding: 30px 0;
+  }
+
+  .project-card img {
+    height: 150px;
   }
 }
