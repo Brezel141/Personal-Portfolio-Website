@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website! This site serves as a digital showcase of my journey in IT and software development, featuring a cyberpunk-inspired design with modern animations and interactive elements.
 
 ## 🌐 Live Demo
-Visit my portfolio at: [[brezel141.github.io]([https://brezel141.github.io](https://brezel141.github.io/my_website/))](https://brezel141.github.io/my_website/)
+Visit my portfolio at: [[[brezel141.github.io]([https://brezel141.github.io](https://brezel141.github.io/my_website/))](https://brezel141.github.io/my_website/)](https://brezel141.github.io/Personal-Portfolio-Website/)
 
 ## ✨ Features
 
